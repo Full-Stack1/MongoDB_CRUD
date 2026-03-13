@@ -63,7 +63,9 @@ const getfiltersname= async(req,res)=>{
     const{name}=req.query;
     if(!name)
         return res.status(400).json({message:"name not found"})
-   const item=await item.findOne({name})
+    
+     //create statics method in schema 
+    const item=await item.findOne({name})
    //validat if item not found
    res.status(200).json({
     message:"The Fetching is done",
